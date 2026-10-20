@@ -13,11 +13,11 @@ async function renderPdf() {
       url: `${pdfPath}?check=${Date.now()}`,
     });
     const pdf = await loadingTask.promise;
+    const contentWidth = Math.min(mainContent.clientWidth, 900);
 
     for (let pageNumber = 1; pageNumber <= pdf.numPages; pageNumber += 1) {
       const page = await pdf.getPage(pageNumber);
       const baseViewport = page.getViewport({ scale: 1 });
-      const contentWidth = Math.min(mainContent.clientWidth, 900);
       const cssScale = contentWidth / baseViewport.width;
       const pixelRatio = Math.min(window.devicePixelRatio || 1, 2);
       const renderViewport = page.getViewport({ scale: cssScale * pixelRatio });
@@ -28,7 +28,6 @@ async function renderPdf() {
       canvas.width = Math.floor(renderViewport.width);
       canvas.height = Math.floor(renderViewport.height);
       canvas.style.width = `${Math.floor(baseViewport.width * cssScale)}px`;
-      canvas.style.height = `${Math.floor(baseViewport.height * cssScale)}px`;
       canvas.setAttribute("role", "img");
       canvas.setAttribute("aria-label", `解説PDF ${pageNumber}ページ目`);
 

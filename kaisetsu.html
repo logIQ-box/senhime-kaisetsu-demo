@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./assets/css/styles.css">
     <script src="./assets/js/pdf-renderer.js" type="module"></script>
   </head>
-  <body class="pdf-page-body">
+  <body>
     <header class="explanation-header">
       <img
         class="explanation-logo"
@@ -22,7 +22,11 @@
     </header>
 
     <main>
-      <div id="pdf-pages" aria-label="『千姫を奪還せよ！』謎解き解説PDF"></div>
+      <div
+        id="pdf-pages"
+        role="document"
+        aria-label="『千姫を奪還せよ！』謎解き解説PDF"
+      ></div>
     </main>
   </body>
 </html>

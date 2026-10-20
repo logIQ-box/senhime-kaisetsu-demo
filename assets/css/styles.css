@@ -35,10 +35,6 @@ main {
   padding-bottom: 48px;
 }
 
-.pdf-page-body main {
-  padding-top: 0;
-}
-
 .explanation-header {
   padding: 32px 0 26px;
 }
@@ -121,10 +117,6 @@ img {
 }
 
 .mobile-break {
-  display: none;
-}
-
-[hidden] {
   display: none;
 }
 
