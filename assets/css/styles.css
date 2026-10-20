@@ -1,6 +1,6 @@
 :root {
   color: #33291f;
-  background: #f5efe4;
+  background: #ece9e2;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
@@ -12,7 +12,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
   margin: 0;
-  background: #f5efe4;
+  background: #ece9e2;
 }
 
 header,
@@ -33,6 +33,10 @@ h1 {
 
 main {
   padding-bottom: 48px;
+}
+
+.pdf-page-body main {
+  padding-top: 32px;
 }
 
 p {
@@ -63,10 +67,14 @@ img {
   max-width: 100%;
   height: auto;
   background: #fffdf7;
-  box-shadow: 0 5px 24px rgb(75 48 22 / 20%);
+  box-shadow: 0 5px 24px rgb(42 39 34 / 16%);
 }
 
 @media (max-width: 600px) {
+  .pdf-page-body main {
+    padding-top: 16px;
+  }
+
   #pdf-pages {
     gap: 12px;
   }
