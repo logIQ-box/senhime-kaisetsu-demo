@@ -52,6 +52,51 @@ img {
   margin-inline: auto;
 }
 
+.waiting-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 42px;
+}
+
+.event-logo {
+  width: min(100%, 720px);
+  margin: 0 auto 34px;
+}
+
+.release-notice {
+  width: min(100%, 640px);
+  padding: 30px 32px 32px;
+  background: rgb(255 255 255 / 68%);
+  border-top: 3px solid #c84d12;
+  box-shadow: 0 8px 30px rgb(42 39 34 / 8%);
+}
+
+.release-notice h1 {
+  color: #2e2924;
+  font-size: clamp(25px, 4.5vw, 36px);
+  line-height: 1.5;
+}
+
+.release-notice h1 strong {
+  color: #bd4610;
+  font-size: 1.18em;
+}
+
+.release-message {
+  margin: 24px 0 0;
+  padding-top: 20px;
+  color: #3f3831;
+  font-size: clamp(17px, 2.5vw, 20px);
+  font-weight: 600;
+  line-height: 1.8;
+  border-top: 1px solid rgb(46 41 36 / 16%);
+}
+
+.mobile-break {
+  display: none;
+}
+
 [hidden] {
   display: none;
 }
@@ -71,6 +116,22 @@ img {
 }
 
 @media (max-width: 600px) {
+  .waiting-main {
+    padding-top: 28px;
+  }
+
+  .event-logo {
+    margin-bottom: 24px;
+  }
+
+  .release-notice {
+    padding: 24px 20px 26px;
+  }
+
+  .mobile-break {
+    display: initial;
+  }
+
   .pdf-page-body main {
     padding-top: 16px;
   }

@@ -11,21 +11,24 @@
     <link rel="stylesheet" href="./assets/css/styles.css">
     <script src="./assets/js/router.js" defer></script>
   </head>
-  <body>
-    <header>
-      <h1>謎解き解説ページ</h1>
-    </header>
-
-    <main>
-      <p>
-        解説は13:00以降に公開予定です。<br>
-        公開時刻になりましたら、もう一度このページをご確認ください。
-      </p>
-
+  <body class="waiting-page">
+    <main class="waiting-main">
       <img
+        class="event-logo"
         src="./assets/images/logo.png"
         alt="いいづか街道まつり謎解きイベント『千姫を奪還せよ！』"
       >
+
+      <section class="release-notice" aria-labelledby="release-heading">
+        <h1 id="release-heading">
+          解説は <strong>13:00以降</strong><br>
+          に公開予定です
+        </h1>
+        <p class="release-message">
+          公開時刻になりましたら、<br class="mobile-break">
+          もう一度このページをご確認ください。
+        </p>
+      </section>
     </main>
   </body>
 </html>
