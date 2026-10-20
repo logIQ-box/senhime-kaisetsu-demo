@@ -14,6 +14,12 @@ GitHub Pages の公開元を、このリポジトリの `main` ブランチ（`/
 
 `assets/documents/kaisetsu.pdf` がなければ `waiting.html`、あれば `kaisetsu.html` へ自動的に移動します。
 
+PDFを置いたまま公開前ページを確認する場合は、URLの末尾に `?preview=waiting` を付けます。
+
+```text
+https://logiq-box.github.io/senhime-kaisetsu-demo/?preview=waiting
+```
+
 ```text
 .
 ├── index.html
