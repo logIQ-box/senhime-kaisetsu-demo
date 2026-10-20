@@ -36,7 +36,34 @@ main {
 }
 
 .pdf-page-body main {
-  padding-top: 32px;
+  padding-top: 0;
+}
+
+.explanation-header {
+  padding: 32px 0 26px;
+}
+
+.explanation-logo {
+  width: min(100%, 600px);
+  margin: 0 auto 18px;
+}
+
+.explanation-title {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  color: #33291f;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: clamp(26px, 4vw, 36px);
+  letter-spacing: 0.12em;
+}
+
+.explanation-title::before,
+.explanation-title::after {
+  flex: 1;
+  height: 1px;
+  content: "";
+  background: #bd4610;
 }
 
 p {
@@ -132,8 +159,16 @@ img {
     display: initial;
   }
 
-  .pdf-page-body main {
-    padding-top: 16px;
+  .explanation-header {
+    padding: 24px 0 18px;
+  }
+
+  .explanation-logo {
+    margin-bottom: 14px;
+  }
+
+  .explanation-title {
+    gap: 12px;
   }
 
   #pdf-pages {
